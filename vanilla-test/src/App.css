@@ -1,0 +1,62 @@
+.page {
+  max-width: 1000px;
+  margin: 0 auto;
+  container-type: inline-size;
+}
+
+.container {
+  container-type: inline-size;
+}
+
+.layout {
+}
+
+.info {
+  padding: 0 1rem;
+}
+
+.info h4 {
+  font-weight: normal;
+  font-style: italic;
+}
+
+.card {
+  margin-bottom: 0.5rem;
+}
+
+.image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 250px;
+}
+
+@container (min-width: 36rem) {
+  .image {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;  
+  }
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+}
+
+@container (max-width: 36rem) {
+  .image {
+    background-position: center 10%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;  
+  }
+  .info p {
+    display: none;
+  }
+}
+
+@container (min-width: 900px) {
+  .layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 1rem;
+  }
+}
